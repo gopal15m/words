@@ -39,10 +39,16 @@ public class WordsTest {
 
     @Test
     public void TestFindWordsForNullString() {
-         actualResult = words.findWords("");
+         actualResult = words.findWords(null);
         assertTrue(CollectionUtils.isEmpty(actualResult));
     }
 
+     @Test
+    public void TestFindWordsForEmptyString() {
+         actualResult = words.findWords(null);
+        assertTrue(CollectionUtils.isEmpty(actualResult));
+    }
+    
     @After
     public void tearDown() throws Exception {
     }
